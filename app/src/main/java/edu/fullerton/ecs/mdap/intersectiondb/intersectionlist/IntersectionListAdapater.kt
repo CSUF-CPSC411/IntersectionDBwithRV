@@ -54,7 +54,7 @@ class IntersectionListAdapter(val clickListener: IntersectionListener) : ListAda
 }
 
 /**
- * Manages a list using the Eugene W. Myers's difference algorithm to reduce processing.
+ * Manages a RecyclerView list using the Eugene W. Myers's difference algorithm to reduce processing.
  */
 class IntersectionDiffCallback : DiffUtil.ItemCallback<Intersection>() {
     /**

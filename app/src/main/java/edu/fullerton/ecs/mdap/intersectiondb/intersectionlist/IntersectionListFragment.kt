@@ -51,7 +51,7 @@ class IntersectionListFragment : Fragment() {
             // Navigate to the intersection view provide the id of the intersection that is shown.
             this.findNavController().navigate(
                 IntersectionListFragmentDirections
-                    .actionIntersectionListFragmentToIntersectionFragment(intersectionId)
+                    .actionIntersectionListFragmentToIntersectionItemFragment(intersectionId)
             )
         })
         // Attach intersection adapter.

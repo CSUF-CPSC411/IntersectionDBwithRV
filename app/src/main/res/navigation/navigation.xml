@@ -9,11 +9,11 @@
         android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionlist.IntersectionListFragment"
         android:label="Manage Intersections">
         <action
-            android:id="@+id/action_intersectionListFragment_to_intersectionFragment"
-            app:destination="@id/intersectionFragment" />
+            android:id="@+id/action_intersectionListFragment_to_intersectionItemFragment"
+            app:destination="@id/intersectionItemFragment" />
     </fragment>
     <fragment
-        android:id="@+id/intersectionFragment"
+        android:id="@+id/intersectionItemFragment"
         android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionitem.IntersectionItemFragment"
         android:label="Intersection Information">
         <argument
