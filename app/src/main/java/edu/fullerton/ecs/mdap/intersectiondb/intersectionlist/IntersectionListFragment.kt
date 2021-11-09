@@ -50,7 +50,7 @@ class IntersectionListFragment : Fragment() {
         // Attach intersection adapter.
         binding.intersectionRecyclerview.adapter = intersectionAdapter
 
-        // Submit an updated list to the intersection listAdapter whenever it changes. Take note
+        // Submit an updated list to the intersection listAdapter whenever the data changes. Take note
         // intersectionList is a LiveData object.
         intersectionViewModel.intersectionList.observe(viewLifecycleOwner, Observer {
             it?.let {
