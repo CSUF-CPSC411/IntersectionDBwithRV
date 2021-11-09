@@ -1,3 +1,3 @@
-# IntersectionDB
+# Intersection Database with Recycler View
 
-Example of using the Room package with DataBinding. It will store and retrieve data from the database while updating the user interface. 
+Example of using the Room package with DataBinding and a RecyclerView. Clicking on items on the RecyclerView displays a focused view on the Intersection.
