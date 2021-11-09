@@ -45,10 +45,11 @@ class IntersectionListFragment : Fragment() {
         // Assign the lifecycle owner to the activity so it manages the data accordingly.
         binding.lifecycleOwner = this
 
-        // Provide a lambda function that is called when the RacyclerView item is selected.
+        // Provide a lambda function that is called when the RecyclerView item is selected.
         var intersectionAdapter = IntersectionListAdapter(IntersectionListener {
             intersectionId ->
-            // Navigate to the intersection view provide the id of the intersection that is shown.
+            // Navigate to the intersection view and provide the id of the intersection referenced
+            // by the select RecyclerView item.
             this.findNavController().navigate(
                 IntersectionListFragmentDirections
                     .actionIntersectionListFragmentToIntersectionItemFragment(intersectionId)
