@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/intersectionListFragment">
+    <fragment
+        android:id="@+id/intersectionListFragment"
+        android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionlist.IntersectionListFragment"
+        android:label="Manage Intersections">
+        <action
+            android:id="@+id/action_intersectionListFragment_to_intersectionFragment"
+            app:destination="@id/intersectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intersectionFragment"
+        android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionitem.IntersectionItemFragment"
+        android:label="Intersection Information">
+        <argument
+            android:name="intersectionId"
+            app:argType="long" />
+    </fragment>
+</navigation>
