@@ -7,17 +7,5 @@
     <fragment
         android:id="@+id/intersectionListFragment"
         android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionlist.IntersectionListFragment"
-        android:label="Manage Intersections">
-        <action
-            android:id="@+id/action_intersectionListFragment_to_intersectionFragment"
-            app:destination="@id/intersectionFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/intersectionFragment"
-        android:name="edu.fullerton.ecs.mdap.intersectiondb.intersectionitem.IntersectionItemFragment"
-        android:label="Intersection Information">
-        <argument
-            android:name="intersectionId"
-            app:argType="long" />
-    </fragment>
+        android:label="Manage Intersections"/>
 </navigation>

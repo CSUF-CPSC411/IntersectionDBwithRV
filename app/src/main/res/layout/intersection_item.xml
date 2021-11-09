@@ -9,11 +9,6 @@
         <variable
             name="intersection"
             type="edu.fullerton.ecs.mdap.intersectiondb.database.Intersection" />
-
-        <!-- Variable that holds a reference to the click listener. -->
-        <variable
-            name="clickListener"
-            type="edu.fullerton.ecs.mdap.intersectiondb.intersectionlist.IntersectionListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,7 +29,6 @@
             android:layout_marginBottom="10dp"
             android:background="#72673AB7"
             android:gravity="center_vertical"
-            android:onClick="@{()-> clickListener.onClick(intersection)}"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@{intersection.name}"

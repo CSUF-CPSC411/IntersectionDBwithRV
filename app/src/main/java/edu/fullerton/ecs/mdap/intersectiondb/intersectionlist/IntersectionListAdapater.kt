@@ -9,10 +9,9 @@ import edu.fullerton.ecs.mdap.intersectiondb.database.Intersection
 import edu.fullerton.ecs.mdap.intersectiondb.databinding.IntersectionItemBinding
 
 /**
- * A RecyclerView adapter that uses the DiffCallback for better performance and a listener to handle
- * clicks/taps on each item.
+ * A RecyclerView adapter that uses the DiffCallback for better performance.
  */
-class IntersectionListAdapter(val clickListener: IntersectionListener) : ListAdapter<Intersection,
+class IntersectionListAdapter() : ListAdapter<Intersection,
         IntersectionListAdapter.ItemViewHolder>(IntersectionDiffCallback()) {
 
     /**
@@ -23,11 +22,10 @@ class IntersectionListAdapter(val clickListener: IntersectionListener) : ListAda
         RecyclerView.ViewHolder(binding.root) {
 
         /**
-         * Assign an intersection object and clickListener to the ItemViewHolder
+         * Assign an intersection object
          */
-        fun bind(item: Intersection, clickListener: IntersectionListener) {
+        fun bind(item: Intersection) {
             binding.intersection = item
-            binding.clickListener = clickListener
         }
     }
 
@@ -49,7 +47,7 @@ class IntersectionListAdapter(val clickListener: IntersectionListener) : ListAda
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         // Assign the corresponding element from the data and the click listener. Take note getItem
         // is a function provided by ListAdapter.
-        holder.bind(getItem(position), clickListener)
+        holder.bind(getItem(position))
     }
 }
 
@@ -70,12 +68,4 @@ class IntersectionDiffCallback : DiffUtil.ItemCallback<Intersection>() {
     override fun areContentsTheSame(oldItem: Intersection, newItem: Intersection): Boolean {
         return oldItem.name == newItem.name && oldItem.location == newItem.location
     }
-}
-
-/**
- * Listener that accepts a lambda function clickListener. It will be called when an element of the
- * RecyclerView is clicked/tapped.
- */
-class IntersectionListener(val clickListener: (intersectionId: Long) -> Unit) {
-    fun onClick(intersection: Intersection) = clickListener(intersection.intersectionId)
 }
